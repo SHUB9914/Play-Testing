@@ -25,7 +25,7 @@ class LoginControlerSpec extends PlaySpec with OneAppPerTest with MockitoSugar {
     }
 
 
-    "render the login  page" in {
+    "render the profile  page" in {
       when(cacheConfService.get[UserData]("")) thenReturn None
       val result = obj.login.apply(FakeRequest(GET, "/userlogin").withFormUrlEncodedBody(("name","s"),("pass","svgsdvg")))
       status(result) mustBe OK
