@@ -1,0 +1,132 @@
+@(message: String)(implicit req: play.api.mvc.RequestHeader)
+
+@helper.javascriptRouter("myJsRoutes")(
+routes.javascript.SignupController.index
+)
+
+<html>
+<head>
+
+ <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("bootstrap/bootstrap.min.css")">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+
+   <link  src="@routes.Assets.versioned("bootstrap/bootstrap.min.css")">
+ <script>
+
+ function my(){
+  alert("hello");
+  }
+
+  function signup(){
+  window.location="@routes.SignupController.index()";
+  }
+
+  function login(){
+  window.location="@routes.LoginController.index()";
+  }
+
+ </script>
+
+<style>
+ .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #4d88ff;
+      font-size: 50px;
+  }
+  .logo {
+      color: #4d88ff;
+      font-size: 250px;
+  }
+  .banner{
+
+    height:265px;
+    background:url('@routes.Assets.versioned("b.jpg")');
+    padding-top:35px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="banner">
+ <nav class="navbar navbar-inverse " style="background:rgba(0,0,0,0.7)" >
+  <div class="container">
+   <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="@routes.Assets.versioned("knoldus.png")" style="max-width:100px; margin-top:-7px;margin-right:50px;"></a>
+   </div>
+   <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+     <li class="active"><a href="/">Home</a></li>
+
+     <li><a href="http://www.knoldus.com/about/ctoinsights.knol" id="p1">ABOUT</a></li>
+     <li><a href="http://www.knoldus.com/work/services.knol">WORK</a></li>
+     <li><a href="http://www.knoldus.com/work/services/why-knoldus-for-scala.knol">CONTACT</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+
+     <li onclick="my()"><a href="@routes.SignupController.index()" ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+     <li><a href="@routes.LoginController.index()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+
+    </ul>
+   </div>
+  </div>
+ </nav>
+
+ <div class="container">
+  <center><h1 style="color:white">Knoldus Software</h1></center>
+ </div>
+
+</div>
+
+
+
+ <!-- Container (About Section) -->
+ <div id="about" class="container-fluid">
+  <div class="row">
+   <div class="col-sm-8">
+    <h2>About Kn<span style="color:blue">o</span>ldus  </h2><br>
+    <h4>Knoldus is a team of Passionate Technologists, focused on staying at the edge of the curve.
+     We love to build Scalable, Performant, Concurrent systems with Functional Programming to meet the needs of the business.
+     Our big data solutions have won accolades in domains</h4><br>
+    <p>Every CTO and software professional is concerned with code quality and so are we.
+     It is our passion and the life line of our business. Our success is determined by our partner's successes. Code Quality is the foundation of that success!
+     Our Team takes precise and prescribed steps to create clean, crisp and quality code for our partners.
+     Quality coding begins with an in-depth knowledge of the technology; continues with a high degree of professionalism; and ends with the desire to make every partner 100% satisfied.
+     We use a well defined process called Knolway to produce high quality software. Some of the essential ingredients of the process are :</p>
+
+   </div>
+   <div class="col-sm-4">
+    <span class="glyphicon glyphicon-signal logo"></span>
+   </div>
+  </div>
+ </div>
+
+ <div class="container-fluid bg-grey">
+  <div class="row">
+   <div class="col-sm-4">
+    <span class="glyphicon glyphicon-globe logo"></span>
+   </div>
+   <div class="col-sm-8">
+    <h2>Our Values</h2><br>
+    <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+    <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+   </div>
+  </div>
+ </div>
+</body>
+</html>
